@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>online food cart</title>
+</head>
+<style>
+ body{
+      background: linear-gradient(to right , rgb(204, 81, 101),white, rgb(204, 81, 101));
+
+ }
+ img{
+    border: 8px solid rgb(101, 20, 33);
+    border-radius: 40%;
+    display: block;
+    margin: auto;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 40px;
+ }
+ img:hover{
+    transform: scale(1.1);
+ }
+ 
+ 
+ .photos{
+    display: flex;
+     flex-wrap: wrap;
+     gap: 20px;
+     justify-content: center;
+ }
+
+ .demo img{
+     width: 200px;
+     height: 200px;
+     border-radius: 10%;
+     border: 8px solid rgb(101, 20, 33 );
+     transition: all 0.3s ease;
+ }
+.demo1 img{
+     width: 200px;
+     height: 200px;
+     border-radius: 10%;
+     border: 8px solid rgb(101, 20, 33 );
+     transition: all 0.3s ease;
+}
+.demo2 img{
+     width: 200px;
+     height: 200px;
+     border-radius: 10%;
+     border: 8px solid rgb(101, 20, 33 );
+     transition: all 0.3s ease;
+}
+
+
+ .demo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+ }
+ .demo1{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+}
+ .demo2{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+}
+
+ 
+ .demo h3{
+    margin-top: 5px 0 2px 0;
+    font-size: 20px;
+    font-weight: bold;
+ }
+  .demo1 h3{
+    margin-top: 5px 0 2px 0;
+    font-size: 20px; 
+    font-weight: bold;
+  }
+  .demo2 h3{
+    margin-top: 5px 0 2px 0;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+
+ .demo img:hover{
+    transform: translateY(-10px);
+ }
+ .demo1 img:hover{
+    transform: translateY(-10px);
+ } 
+ .demo2 img:hover{
+    transform: translateY(-10px);
+ }
+ 
+
+
+
+.rating{
+    color:black;
+    font-size:18px;
+    margin:2px 0;
+}
+
+.price{
+    font-size:22px;
+    font-weight:bold;
+    margin:5px 0;
+}
+
+button{
+    background:#8B0000;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:25px;
+    cursor:pointer;
+    font-size:16px;
+    margin-top:8px;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#ff9800;
+    transform:scale(1.05);
+}
+.box{
+  box-shadow: 0 0 40px;
+  position:absolute;
+  right: 20px;
+  top: 180px;
+  width: 220px;
+  background-color: rgb(239, 215, 189);
+  border: 7px solid rgb(85, 28, 28);
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+.box:hover{
+  transform: scale(1.1);
+}
+
+.box h3{
+  font-size: 30px;
+  text-shadow:0 0 8px white;
+}
+.box ul{
+  font-size: 20px;
+    text-shadow:0 0 8px white;
+}
+.left-box1{
+  box-shadow: 0 0 40px;
+  position:absolute;
+  left: 20px;
+  top: 180px;
+  width: 220px;
+  background-color: rgb(239, 215, 189);
+  border: 3px solid rgb(85, 28, 28);
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+.left-box1:hover{
+  transform: scale(1.1);
+}
+.left-box2{
+  box-shadow: 0 0 40px;
+  position:absolute;
+  left: 20px;
+  top: 360px;
+  width: 220px;
+  background-color: rgb(239, 215, 189);
+  border: 3px solid rgb(85, 28, 28);
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+.left-box2:hover{
+  transform: scale(1.1);
+}
+
+.left-box3{
+  box-shadow: 0 0 40px;
+  position:absolute;
+  left: 20px;
+  top: 560px;
+  width: 220px;
+  background-color: rgb(239, 215, 189);
+  border: 3px solid rgb(85, 28, 28);
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+.left-box3:hover{
+  transform: scale(1.1);
+}
+
+.left h3{
+  text-align: center;
+  font-size: 20px;
+  text-shadow: 0 0 8px white;
+}
+.left p{
+  text-align: center;
+  text-shadow: 0 0 8px white;
+}
+
+
+/* css of below item box */
+.review{
+  box-shadow: 0 0 10px;
+  width: 1600px;
+  height: 300px;
+  border: 2px solid black;
+  position: absolute;
+  left: 50px;
+}
+.review h1{
+  text-align: center;
+}
+.b1{
+  box-shadow: 0 0 10px;
+  border: 2px solid black;
+  width: 340px;
+  position: absolute;
+  left: 20px;
+  height: 200px;
+  text-align: center;
+    transition: all 0.2s ease;
+}
+.b1 p{
+  font-size: 25px;
+}
+.b1:hover{
+  transform: scale(1.1);
+}
+
+.b2{
+  box-shadow: 0 0 10px;
+  border: 2px solid black;
+  width: 340px;
+  height: 200px;
+  text-align: center;
+  position: absolute;
+  left: 410px;
+  top: 85px;
+    transition: all 0.2s ease;
+}
+.b2 p{
+  font-size: 25px;
+}
+.b2:hover{
+  transform: scale(1.1);
+}
+
+.b3{
+  box-shadow: 0 0 10px;
+  border: 2px solid black;
+  width: 340px;
+  height: 200px;
+  text-align: center;
+  position: absolute;
+  left:810px;
+  top: 85px;
+    transition: all 0.2s ease;
+}
+.b3 p{
+  font-size: 25px;
+}
+.b3:hover{
+  transform: scale(1.1);
+}
+
+.b4{
+  box-shadow: 0 0 10px;
+  border: 2px solid black;
+  width: 340px;
+  height: 200px;
+  text-align: center;
+   position: absolute;
+  left: 1220px;
+  top: 85px;
+  transition: all 0.2s ease;
+}
+.b4:hover{
+  transform: scale(1.1);
+}
+.b4 p{
+  font-size: 25px;
+}
+
+
+
+
+
+
+/* footer css */
+.foot{
+  position: absolute;
+  width: 2000px;
+}
+.links{
+  position: absolute;
+  left: 600px;
+  top: 10px;
+}
+
+.category{
+  position: absolute;
+  left: 1000px;
+  top:10px ;
+}
+
+.contact{
+  position: absolute;
+  left: 1400px;
+  top: 10px;
+
+}
+
+</style>
+<body>
+    <header>
+        <pre align="right"><a href="">Food-menu</a>   <a href="" >Login</a>   <a href="">Signup</a></pre>
+            <img src="template.png" alt="food item" width="1000" height="600">
+            <div class="box">
+              <h3>🍰Categories -</h3>
+            <ul>
+              <li>🎂Cakes</li>
+              <li>🍩Donuts</li>
+              <li>🍦Ice Cream</li>
+              <li>🥮Brownies</li>
+              <li>🍪Cookies</li>
+            </ul>
+            </div>
+            
+            <div class="left">
+            <div class="left-box1">
+              <h3>🔥Today's Offer</h3>
+              <p>Buy 2 Cakes & Get 1 Brownie Free !</p>
+            </div><br>
+             <div class="left-box2">
+              <h3>⏰Opening Hours</h3>
+              <p>🗓️Mon - Sun</p>
+              <p>9:00 AM - 10:00 PM</p>
+             </div><br>
+             <div class="left-box3">
+              <h3>📞Contact Me</h3>
+              <p>91+ 1234567890</p>
+              <p>sweetcraving@gmail.com</p>
+             </div>
+             </div>
+
+    </header>
+    <br><br><br><br>
+    
+  
+  
+  <!-- website images  -->
+    <main>
+        <div class="photos">
+      <div class="demo">
+            <img src="https://www.cookwithmanali.com/wp-content/uploads/2014/11/Indian-Butterscotch-Ice-Cream-No-Churn-676x1024.jpg" alt="" > 
+           <h3>Butterscotch Ice-Cream</h3> 
+           <p class="rating">⭐⭐⭐⭐4.8 (564 Reviews)</p>
+           <p class="price">₹80</p>
+           <button onclick="window.location.href='index.html'">Order Now</button>
+            </div>
+      <div class="demo">
+          <img src="https://bakewithshivesh.com/wp-content/uploads/2022/11/WhatsApp-Image-2022-11-24-at-9.58.19-PM-1.jpeg">
+            <h3>Chocolate Waffle</h3>
+             <p class="rating">⭐⭐⭐⭐4.0 (463 Reviews)</p>
+           <p class="price">₹173</p>
+           <button onclick="window.location.href='index.html'">Order Now</button>
+        </div>
+      <div class="demo">
+             <img src="https://thefirstyearblog.com/wp-content/uploads/2020/10/chocolate-donuts-Square2.png">
+            <h3>Chocolate Donuts</h3>
+             <p class="rating">⭐⭐⭐3.8 (324 Reviews)</p>
+           <p class="price">₹210</p>
+           <button onclick="window.location.href='index.html'">Order Now</button>
+        </div>
+       <div class="demo">
+              <img src="https://bakewithshivesh.com/wp-content/uploads/2020/12/IMG-1099-scaled.jpg">
+            <h3>Black Plum-Cake</h3>
+             <p class="rating">⭐⭐⭐⭐4.2 (364 Reviews)</p>
+           <p class="price">₹457</p>
+           <button onclick="window.location.href='index.html'">Order Now</button>
+      </div>
+      <div class="demo">
+        <img src="https://media.sailusfood.com/wp-content/uploads/2013/05/mango-dessert-recipes.jpg">
+         <h3>Mango Pudding</h3>
+          <p class="rating">⭐⭐⭐3.2 (313 Reviews)</p>
+           <p class="price">₹160</p>
+           <button onclick="window.location.href='index.html'">Order Now</button>
+      </div>
+      <div class="demo">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaKMt1mK0D-blrAmVXoeDJQBaGp0sx0fDkDp6HisT62hbHN_PkHVUGGf0&s=10">
+              <h3>Macarons</h3>
+               <p class="rating">⭐⭐⭐⭐4.7 (464 Reviews)</p>
+           <p class="price">₹110</p>
+           <button onclick="window.location.href='index.html'">Order Now</button>
+        </div>
+    </div>
+      <br><br><br><br>
+
+
+
+
+      <div class="photos">
+      <div class="demo1">
+        <img src="https://www.cravebyleena.com/cdn/shop/files/black-drip-cake-crave-by-leena-2_b39a588f-b795-478a-bb84-349514cd9c14.png?v=1702746564">
+         <h3>Dark Chocolate Cake</h3>
+          <p class="rating">⭐⭐⭐⭐4.8 (1064 Reviews)</p>
+           <p class="price">₹897</p>
+           <button onclick="window.location.href='index.html'">Order Now</button>
+      </div>
+      <div class="demo1">
+        <img src="https://www.ruchikrandhap.com/wp-content/uploads/2018/03/Tiramisu-1-1-320x320.jpg">
+        <h3>Tiramisu</h3>
+         <p class="rating">⭐⭐⭐⭐4.6 (864 Reviews)</p>
+           <p class="price">₹487</p>
+           <button onclick="window.location.href='index.html'">Order Now</button>
+      </div>
+        <div class="demo1">
+        <img src="https://www.momontimeout.com/wp-content/uploads/2023/09/no-bake-peanut-butter-cheesecake-square.jpeg">
+        <h3>Cheese-Cake</h3>
+         <p class="rating">⭐⭐⭐⭐⭐5.0 (1764 Reviews)</p>
+           <p class="price">₹320</p>
+           <button onclick="window.location.href='index.html'">Order Now</button>
+      </div>
+      <div class="demo1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm_tZj9v6Wg3ylHB0kdwYshuZL3wmwvPFBPoIsQOciPGFdowd0nvoLPzM&s=10">
+        <h3>Chocolate-Rolls</h3>
+         <p class="rating">⭐⭐⭐3.8 (684 Reviews)</p>
+           <p class="price">₹100</p>
+           <button onclick="window.location.href='index.html'">Order Now</button>
+      </div>
+      <div class="demo1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw-iCIectFKi0FjRgI77YCWLkSo7LeP80NkpV69yTaUQ&s=10">
+        <h3>Dark Chocolate</h3>
+         <p class="rating">⭐⭐⭐⭐⭐5.0 (2098 Reviews)</p>
+           <p class="price">₹132</p>
+           <button onclick="window.location.href='index.html'">Order Now</button>
+      </div>
+      <div class="demo1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNBL1_1WptX-l27W7iO-FJLMloyW_kKfLAIZeUVOt-IQ&s=10">
+        <h3>Chocolate Candy Bars</h3>
+         <p class="rating">⭐⭐⭐⭐4.7 (664 Reviews)</p>
+           <p class="price">₹184</p>
+           <button onclick="window.location.href='index.html'">Order Now</button>
+      </div>
+      </div>
+      <br><br><br><br>
+
+       <div class="photos">
+      <div class="demo2">
+            <img src="https://cdn.prod.website-files.com/614a379840dbad1848e598c2/679906d29abceb2bbceb06b3_6799062816366d61273c52b4_IMG_1560.jpeg" > 
+           <h3>Red Velvet Cake</h3> 
+           <p class="rating">⭐⭐⭐⭐4.8 (564 Reviews)</p>
+           <p class="price">₹730</p>
+           <button onclick="window.location.href='index.html'">Order Now</button>
+            </div>
+      <div class="demo2">
+          <img src="https://www.yummytummyaarthi.com/wp-content/uploads/2022/12/fudge-brownies-1-500x500.jpeg">
+            <h3>Chocolate Brownie</h3>
+             <p class="rating">⭐⭐⭐⭐4.3 (363 Reviews)</p>
+           <p class="price">₹173</p>
+           <button onclick="window.location.href='index.html'">Order Now</button>
+        </div>
+      <div class="demo2">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzg4LZIlkNve_nSaENARfLqHLk10ggrctl5kVSsGUYBcUOuowVf0HVx38&s=10">
+            <h3>Chocolate Muffin</h3>
+             <p class="rating">⭐⭐⭐3.4 (624 Reviews)</p>
+           <p class="price">₹200</p>
+           <button onclick="window.location.href='index.html'">Order Now</button>
+        </div>
+       <div class="demo2">
+              <img src="https://www.oetker.ca/assets/recipes/assets/232ec0777fce4425a0cbb4401558dd79/1272x764/lemon-tarte-11.webp">
+            <h3>Lemon Tart</h3>
+             <p class="rating">⭐⭐⭐⭐4.7 (864 Reviews)</p>
+           <p class="price">₹157</p>
+           <button onclick="window.location.href='index.html'">Order Now</button>
+      </div>
+      <div class="demo2">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYwF9bNnEaSm6m81Lvwo1yWsofF3gfAv7BzZph4Wo0eSuLhcSkCRfMhUZf&s=10">
+         <h3>Nutella Crepe</h3>
+          <p class="rating">⭐⭐⭐3.2 (394 Reviews)</p>
+           <p class="price">₹180</p>
+           <button onclick="window.location.href='index.html'">Order Now</button>
+      </div>
+      <div class="demo2">
+           <img src="https://gimmethatflavor.com/wp-content/uploads/2021/02/Eggless-Chocolate-Cookies-24.jpg">
+              <h3>Cookies</h3>
+               <p class="rating">⭐⭐⭐⭐4.0 (564 Reviews)</p>
+           <p class="price">₹150</p>
+           <button onclick="window.location.href='index.html'">Order Now</button>
+        </div>
+    </div>
+    <br><br>
+    <hr>
+
+<br><br>
+    <div class="review">
+      <h1>⭐WHY CHOOSE US -</h1>
+      <ul>
+        <div class="b1">
+      <h1>🍫Fresh Ingredients</h1> 
+      <p>Fresh & Quality ingredients.</p>
+      </div>
+      <div class="b2">
+      <h1>🍦Freshly Baked</h1>  
+      <p>Made with care everyday.</p>
+      </div>
+      <div class="b3">
+      <h1>🚚Fast Delivery</h1> 
+      <p>Quick & Safe delivery.</p>
+      </div>
+      <div class="b4">
+      <h1>❤️Made With Love</h1>
+      <p> Sweetness in every bite.</p>
+      </div>
+      </ul>
+    </div>
+
+
+    </main>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>
+
+    <footer>
+      <br>
+      <div class="foot">
+      <h2>SWEET CRAVING </h2>
+      <p>Delicious moments, once bite at a time.</p>
+
+      <div class="links">
+      <h3>Quick Links</h3>
+      <li>Home</li>
+      <li>Menu</li>
+      <li>About Us</li>
+      <li>Contact Us</li>
+      </div>
+
+      <div class="category">
+        <h3>Categories</h3>
+        <li>Cakes</li>
+        <li>Donuts</li>
+        <li>Ice Cream</li>
+        <li>Brownies</li>
+        <li>Cookies</li>
+      </div>
+
+      <div class="contact">
+        <h3>Contact Us</h3>
+        <li>📞91+ 1234567890</li>
+        <li>✉️sweetcraving@gmail.com</li>
+        <li>📍Faridabad, Haryana</li>
+      </div>
+</div>
+    </footer>
+</body>
+</html>
+
+
+
+
+

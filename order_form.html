@@ -1,0 +1,100 @@
+<html>
+<head>
+<title> Form to Place an Order
+</title>
+<style>
+    .container{
+        display:flex;
+    }
+    fieldset{
+        width: 350px;
+        margin:auto;
+        background-color:whitesmoke;
+        border-radius: 10%;
+        border:3px solid black;
+        box-shadow: 0 0 20px;
+    }
+    form{
+        color: black;
+        
+    }
+    body{
+        background-color: rgb(220, 148, 160);
+    }
+  input,select,textarea{
+    border: 2px solid black;
+  }
+  .button button{
+    background:#8B0000;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:25px;
+    cursor:pointer;
+    font-size:16px;
+    margin-top:8px;
+
+}
+div b{
+  font-size: 20px;
+}
+  
+</style>
+</head>
+<body>
+    <br><br>
+<h1><b><center>PLACE YOUR ORDER NOW</center></b></h1>
+<form>
+    <div class="container">
+    <fieldset>
+        <b><center>FILL YOUR DETAILS</center></b>
+        <br>
+ FULL NAME : <input type ="text"placeholder="Enter your name"><br>
+PHONE NUMBER : <input type ="number"placeholder="Enter 10-digit mobile number"><br>
+EMAIL ID : <input type ="text"placeholder="Enter your email id"><br>
+DELIVERY ADDRESS : <br><textarea name="address" rows="4" cols="20">Enter your address</textarea><br>
+PINCODE : <input type="number" placeholder="Enter pincode"><br>
+CITY : <input type="text" placeholder="Enter your city"><br>
+STATE : <input type="text" placeholder="Enter your state"><br>
+<hr>
+SELECT YOUR ITEM :<select name="item" id="item">
+                  <option value="select item">Select Item</option>
+                   <option>Butterscotch Ice-Cream</option>
+                   <option>Chocolate Waffle</option>
+                   <option>Chocolate Donuts</option>
+                   <option>Black Plum-Cake</option>
+                     <option>Mango Pudding</option>
+                       <option>Macarons</option>
+                         <option>Dark Chocolate Cake</option>
+                           <option>Tiramisu</option>
+                             <option>Cheese-Cake</option>
+                              <option>Chocolate-Rolls</option>
+                                <option>Dark Chocolate</option>
+                                  <option>Chocolate Candy Bars</option>
+                                    <option>Red Velvet Cake</option>
+                                      <option>Chocolate Brownie</option>
+                                        <option>Chocolate Muffin</option>
+                                        <option>Lemon Tart</option>
+                                          <option>Nutella Crepe</option>
+                                            <option>Cookies</option>
+</select><br>
+QUANTITY :<button onclick="decrease">-</button><input type="number"><button onclick="increase">+</button> <br><br>
+SPECIAL INSTRUCTIONS(Optional) :<br> <textarea name="address" rows="4" cols="20">Any special request for your order ?</textarea><br><br>
+PAYMENT METHOD :<br> <input type="radio" name="payment">Cash on Delivery<br>
+                    <input type="radio" name="payment">UPI/Google Pay/PhonePe<br>
+                    <input type="radio" name="payment">Credit/Debit Card<br>
+                     <input type="radio" name="payment">Net Banking<br>
+                     <br><br>
+<div class="button">
+<center>
+<button type="button">Reset Form</button>
+<button type="button" onclick="window.location.href='thank.html'">Place Order</button>
+</center>
+</div>
+</fieldset>
+    </div>
+</form>
+<footer><b>Thank you for choosing sweet delights!</b></footer>
+
+</body>
+</html>
